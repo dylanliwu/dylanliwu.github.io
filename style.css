@@ -1,0 +1,246 @@
+
+html {
+    font-family: "Cabin", sans-serif;
+    background: #fff;
+    overflow-x: hidden;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 100%;
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Containers */
+
+.container {
+    width: 100%;
+}
+
+/*Text Styles*/
+
+h1 {
+    position: aboslute;
+    font-size: 1.2rem;
+    animation: fadeIn 0.5s ease-in;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-top: 10%;
+}
+
+h3 {
+    padding-bottom: 5%;
+    font-size: 2rem;
+    margin-top: 5%;
+}
+
+p {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5%;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    color: #727272;
+}
+
+/*Animations*/
+
+@keyframes fadeIn { 
+    from { 
+        opacity: 0; 
+    } 
+    to { 
+        opacity: 1; 
+    } 
+}
+
+@keyframes iconSlideDown { 
+    from { 
+        transform: translateY(-100px); 
+        opacity: 0; 
+    } 
+    to { 
+        transform: translateY(0); 
+        opacity: 1; 
+    } 
+}
+
+@keyframes appear { 
+    from { 
+        opacity: 0; 
+        max-height: 0; 
+    } 
+    to { 
+        opacity: 1; 
+        max-height: 500px; 
+    } 
+}
+
+@keyframes vanish { 
+    from { 
+        display: block; 
+        opacity: 1; 
+        max-height: 500px; 
+    } 
+    20% {
+        opacity: 0;
+    }
+    to { 
+        display: none; 
+        opacity: 0; 
+        max-height: 0; 
+    } 
+}
+
+/*Boxes*/
+
+.hellobox {
+    width: 100%;
+    padding-bottom: 15%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    transition: transform .7s, box-shadow 0.7s;
+    text-align: center;
+    box-shadow: 1px 1px 15px 1px #dbdbdb;
+    float: left;
+    animation: fadeIn 1s ease-in;
+}
+
+.workbox {
+    margin-top: 5%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    transition: transform .7s, box-shadow 0.7s;
+    text-align: center;
+    box-shadow: 1px 1px 15px 1px #dbdbdb;
+    float: inline-start;
+    animation: fadeIn 1s ease-in;
+}
+
+#cbstore, #cbsushi {
+    display: none;
+}
+
+#cbstore:checked ~ .storecontent,
+#cbsushi:checked ~ .sushicontent {
+    animation: appear 0.5s;
+    display: block;
+}
+
+.storecontent, .sushicontent {
+    display: none;
+    animation: vanish 0.5s;
+}
+
+#cbstore:checked ~ .labelstore,
+#cbsushi:checked ~ .labelsushi {
+    display: none;
+}
+
+.labelstore, .labelsushi {
+    font-size: 1.5rem;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    padding-bottom: 5%;
+    animation: appear 2s;
+}
+
+.gdbox {
+    margin-top: 5%;
+    width: 55%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    transition: transform .7s, box-shadow 0.7s;
+    text-align: center;
+    box-shadow: 1px 1px 15px 1px #dbdbdb;
+    float: right;
+}
+
+.hellobox:hover, .workbox:hover, .gdbox:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 20px #b3b3b3;
+}
+
+/*Buttons*/
+
+#email, #linkedln, #hamburger {
+    background-color: #ffffff;
+    position: absolute;
+    top: 5%;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+    opacity: 0;
+    animation: iconSlideDown 0.7s 0.9s ease-out forwards;
+}
+
+#email { left: 74%; }
+#linkedln { left: 77%; }
+#hamburger {
+    position: fixed;
+    top: 5%;
+    left: 88%;
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 10rem;
+}
+
+#email:hover, #linkedln:hover, #hamburger:hover {
+    transform: translateY(-10px);
+    box-shadow: 1px 5px 10px #949494;
+}
+
+#email:hover { background-color: #ffe033; }
+#linkedln:hover { background-color: #0274b3; }
+#hamburger:hover { background-color: #c2c2c2; }
+
+.menu {
+    position: fixed;
+    margin-top: 5%;
+    width: 8%;
+    left: 85.2%;
+    top: 3%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 1px 1px 15px 1px #dbdbdb;
+    transition: opacity 0.7s, transform 0.7s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.menu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home, .other {
+    padding: 10%;
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #949494;
+    transition: background-color 0.4s;
+    border-width: 0;
+}
+
+.home { border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; }
+.other { border-top-left-radius: 1rem; border-top-right-radius: 1rem; }
+
+.home:hover, .other:hover {
+    background-color: rgb(221, 221, 221);
+}

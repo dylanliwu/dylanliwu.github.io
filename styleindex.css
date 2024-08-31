@@ -1,0 +1,193 @@
+/* ALl Boxes */
+
+#aboutbox, #workbox, #spbox {
+    position: relative;
+    background-color: rgb(15, 15, 15);
+    border: 2px solid #1d1d1d;
+    border-radius: 15px;
+    box-shadow: 1px 1px 50px 20px #000000;
+    font-family: inherit;
+    &:hover, &:hover, &:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 1px 50px 20px #3a3a3a;
+        cursor: pointer;
+    }
+    &:hover .arrow, &:hover .arrow, &:hover .arrow {
+        text-shadow: 1px 1px 0.5rem rgb(255, 255, 255);
+        color: white;
+        scale: 0.8;
+    }
+}
+
+.arrow {
+    position: absolute;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    bottom: 2rem;
+    right: 2rem;
+    color: #2a2a2a;
+}
+
+.arrow:hover {
+    translate: 1rem;
+}
+
+/* About Box */
+
+#aboutbox {
+    padding: 5% 15%;
+    display: flex;
+    transition: transform .5s, box-shadow 0.7s;
+    animation: fadeIn 0.5s ease-in;
+}
+
+#aboutbox:hover #me {
+    filter: saturate(130%);
+}
+
+#habout {
+    padding-bottom: 5%;
+    font-size: 3rem;
+    background-image: linear-gradient(130deg, #ff3728 5%, #ff6363 35%, #ff9a47 70%, #ffa600 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 0.1rem #ff7979);
+    text-align: center;
+}
+
+#imgcontainer {
+    display: flex;
+    max-width: 55%;
+    padding: 0 0 0 20%;
+    align-items: center;
+}
+
+#me {
+    width: 100%;
+    border-radius: 100%;
+    filter: saturate(110%);
+    transition: filter 0.5s;
+    border: 3px solid #1d1d1d;
+    box-shadow: 1px 1px 25px 1px #000000;
+}
+
+#abouttextcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 45%;
+}
+
+/* Work Box */
+
+#workbox {
+    padding: 5% 20% 3%;;
+    transition: transform .5s, box-shadow 0.7s;
+    animation: scrollAppearHome linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+#hwork {
+    text-align: center;
+    padding-bottom: 5%;
+    background-image: linear-gradient(130deg, #ff5df7 5%, #ff7fdf 35%, #3b4fff 70%, #2eff27 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.worktitle {
+    padding: 3rem;
+    margin: -2rem;
+    font-size: 1.5rem;
+    &:hover + .more {
+        grid-template-rows: 1fr;
+    }
+}
+
+.more {
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:  grid-template-rows 0.5s;
+    &:hover {
+        grid-template-rows: 1fr;
+    }
+    > div {
+        overflow: hidden;
+    }
+}
+
+.workcontent {
+    padding: 2rem;
+}
+
+/* Skills and Projects Box */
+
+#spbox {
+    padding: 5% 20% 5%;
+    transition: transform .5s, box-shadow 0.7s;
+    animation: scrollAppearHome linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    & #hsp {
+        text-align: center;
+        padding-bottom: 5%;
+        background-image: linear-gradient(130deg, #00fff2 5%, #00ccff 35%, #54ff87 70%, #2eff27 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+@media (max-width: 1376px) {
+
+    #aboutbox, #workbox, #spbox {
+        min-height: 50vh;
+    }
+}
+
+@media (max-width: 920px) {
+    #aboutbox {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #imgcontainer {
+        padding: 5% 0 0 0;
+    }
+    #habout {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        margin-bottom: 25%;
+    }
+
+}
+
+@media (max-width: 693px) {
+    #aboutbox {
+        padding: 1%;
+    }
+    #habout {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 0.75rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .workcontent {
+        padding: 0;
+    }
+    #footercontainer {
+        margin-top: 75%;
+    }
+}
+
+
+
+
+
+

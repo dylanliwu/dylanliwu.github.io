@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Title -->
+
+    <title>Dylan Li</title>
+
+    <!-- Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleindex.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <!-- Header -->
+
+    <div id="headercontainer">
+        <h1 id="hheader">DYLAN ‎ LI</h1>
+        <div id="contactcontainer">
+            <a href="mailto:dylanli0419@gmail.com"><button id="email"><i id="iemail" class="fa-solid fa-envelope icon"></i></button></a>
+            <a href="https://www.linkedin.com/in/dylan-li-1a4890215/"><button id="linkedln"><i id="ilinkedln" class="fa-brands fa-linkedin icon" style="font: 0.4rem;"></i></button></a>
+        </div>
+        <div id="menucontainer">
+            <button id="menubutton" onclick="myFunction(this)">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </button>
+              
+            <div id="menucontent">
+                <a href="home.html"><button id="homebutton" data-tooltip="Home"><i class="fa-solid fa-house"></i></button></a>
+                <a href="about.html"><button id="aboutbutton" data-tooltip="About Me"><i class="fa-solid fa-user icon"></i></button></a>
+                <a href="work.html"><button id="workbutton" data-tooltip="Work Experience"><i class="fa-solid fa-briefcase icon"></i></button></a>
+                <a href="sp.html"><button id="spbutton"><i class="fa-solid fa-code icon"></i></button></a>
+            </div>
+        </div>
+    </div> 
+
+    <!-- About -->
+
+    <div class="container">
+        <div id="aboutbox">
+            <i class="fa-solid fa-arrow-right arrow"></i>
+            <div id="abouttextcontainer">
+
+                <h2 id="habout">My Portfolio</h2>
+                <p id="pabout">Hi, I'm Dylan, a first-year engineering student and tech enthusiast.<br><br><i class="fa-solid fa-location-dot icon"></i> Hamilton, Ontario.</p>
+            </div>
+            <div id="imgcontainer">
+                <img id="me" src="images/me.png">
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Work -->
+
+    <div class="container">
+        <div id="workbox">
+            <i class="fa-solid fa-arrow-right arrow"></i>
+            <h3 id="hwork">Work Experience</h3>
+            <p class="worktitle"><i class="fa-solid fa-circle-arrow-down" style="color: #4a4a4a; font-size: 1.3rem;"></i> Store Associate at TJX Canada 🛒</p>
+            <div class="more">
+                <div>
+                    <p class="workcontent">My experience as a store associate improved my ability to communicate and remain patient. Working in the chaotic environment of retail improved my ability to perform under pressure and be organized in rapidly changing situations.</p>
+                </div>
+            </div>
+            <p class="worktitle"><i class="fa-solid fa-circle-arrow-down" style="color: #4a4a4a; font-size: 1.3rem;"></i> Sushi Chef at Bento Sushi 🍱</p>
+            <div class="more">
+                <div>
+                    <p class="workcontent">As a result of typically working with only one co-worker, my experience as a sushi chef improved my intimate teamwork and task management.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills and Projects -->
+
+    <div class="container">
+        <div id="spbox">
+            <i class="fa-solid fa-arrow-right arrow"></i>
+            <h3 id="hsp">Skills and Projects</h3>
+            <p id="psp">Through dedicating myself to academics, gaining work experience, and pursuing my passions, I developed soft and technical skills while also making projects.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div id="footercontainer">
+        <h1 id="hfooter">COPYRIGHT © 2024 DYLAN LI. ALL RIGHTS RESERVED.<br>WEBSITE MADE BY DYLAN LI USING VANILLA HTML CSS AND JAVASCRIPT</h1>
+    </div> 
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

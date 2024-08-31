@@ -1,0 +1,70 @@
+/* Main */
+
+#mainbox {
+    background-color: transparent;
+    text-align: center;
+    padding: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgb(15, 15, 15);
+    border: 2px solid #1d1d1d;
+    box-shadow: 1px 1px 50px 20px #000000;
+    font-family: inherit;
+    margin-bottom: 10%;
+    animation: fadeIn 0.5s ease-in;
+    & #hmain {
+        font-size: 5rem;
+        line-height: 90%;
+        background-image: linear-gradient(130deg, #ff3728 5%, #ff6363 35%, #ff9a47 70%, #ffa600 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 0 0.1rem #ff7979);
+        padding-bottom: 5%;
+    }
+}
+
+/* Gallery */
+
+#gallerybox {
+    text-align: center;
+    padding: 5%;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgb(15, 15, 15);
+    border: 2px solid #1d1d1d;
+    box-shadow: 1px 1px 50px 20px #000000;
+    font-family: inherit;
+    margin-bottom: 10%;
+    animation: fadeIn 0.5s ease-in;
+    & .gallery {
+        display: flex;
+        gap: 2rem;
+        & .column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            & .aboutimgs {
+                width: 20rem;
+                border-radius: 5px;
+                object-fit: cover;
+                animation: scrollAppear linear;
+                animation-timeline: view();
+                animation-range: entry 0 cover 40%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

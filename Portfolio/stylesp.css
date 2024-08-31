@@ -1,0 +1,24 @@
+#mainbox {
+    text-align: center;
+    padding: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgb(15, 15, 15);
+    border: 2px solid #1d1d1d;
+    box-shadow: 1px 1px 50px 20px #000000;
+    font-family: inherit;
+    margin-bottom: 10%;
+    animation: fadeIn 0.5s ease-in;
+    & #hmain {
+        font-size: 5rem;
+        line-height: 90%;
+        background-image: linear-gradient(130deg, #00fff2 5%, #00ccff 35%, #54ff87 70%, #2eff27 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+        padding-bottom: 5%;
+    }
+}
+

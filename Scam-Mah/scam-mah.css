@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: red solid 1px; */
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.container {
+    width: 100%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    margin-bottom: 22.5%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+p {
+    font-weight: 600;
+    color: rgb(170, 170, 170);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.75;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 50%;
+    }
+    75% {
+      background-position: -100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+#maincontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    animation: fade 2s;
+    margin-top: 5%;
+}
+
+#mainimg {
+    width: 75%;
+    position: relative;
+}
+
+#hmain {
+    font-size: 5rem;
+}
+
+#h2main {
+    color: grey;
+}
+
+#secondcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scamcallerimg {
+    margin-right: 3%;
+}
+
+#secondtextcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#hsecond {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 2.3rem;
+}
+
+#psecond {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#thirdcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hthird {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3%;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff4a4a, #f8c537, #2b4eff, #ff4b4b, #ff5ab7);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 18s infinite linear;
+  }
+
+#pthird {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+
+#aiimg {
+    width: 150%;
+    margin-left: 10%;
+}
+
+#smalltextcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30%;
+}
+
+#psmalltext {
+    font-size: 1.5rem;
+    margin-top: 1%;
+}
+
+#forthcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scammerinputcontainer {
+    position: relative;
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.mic-toggle {
+    font-size: 3.5rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    box-shadow: 0px 0px 10px 5px rgb(204, 204, 204);
+    transition: 0.3s;
+    transform-origin: center;
+}
+
+.mic-toggle:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.mic-toggle.is-recording {
+    background-color: rgb(224, 0, 0);
+}
+
+#forthtextcontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#hforth {
+    font: 2.2rem;
+    margin-bottom: 3%;
+}
+
+#pforth {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+
+#fifthcontainer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17.5%;
+}
+
+#fifthtextcontainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+#hfifth {
+    font: 2.2rem;
+    margin-bottom: 3%;
+}
+
+#pfifth {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+
+#footercontainer {
+    width: 100%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+#hfooter {
+    color: grey;
+    font-size: 1rem;
+}

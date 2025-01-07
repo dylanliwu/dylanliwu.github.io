@@ -1,0 +1,157 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="nimbus-notes.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <title>MetaHacks</title>
+
+    </head>
+    <body>
+
+    <div id="headercontainer">
+        <section id="buttons">
+            <a href="#section-one">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="#section-two">
+                <i class="fa-solid fa-book"></i>
+            </a>
+            <a href="#section-three">
+                <i class="fa-solid fa-info"></i>
+            </a>
+        </section>
+    </div>
+    
+    <div id="landingPageContainer">
+        <h1 id="landingPageHeader">Nimbus Notes</h1>
+        <img src="nimbus-notes-images/person.png" id="personImg" class="landingImg">
+        <img src="nimbus-notes-images/background.png" id="backgroundImg">
+        <img src="nimbus-notes-images/cloud1.png" id="cloud1Img" class="landingImg">
+        <img src="nimbus-notes-images/cloud2.png" id="cloud2Img" class="landingImg">
+    </div>
+
+    
+
+    <secion id="section-three">
+        <div id="informationcontainer">
+            <h1 id="informationheader">Why did we make<span class="gradienttext"> Nimbus Notes?</span></h1>
+            <p id="informationparagraph">Nimbus Notes first listens alongside you during classes with a simple press of the button, but it’s also very time-consuming to relisten to lectures. So, Nimbus Notes also generates a comprehensive summary once you click stop recording. After it finishes, it’ll create a flashcard to test your knowledge of the topic all powered by the Llama 3.2 3B model run locally on the machine.</p>
+        </div>
+    </secion>
+
+    <h1 id="mainheading">Demonstrating<span class="gradienttext"> Nimbus Notes: </span></h1>
+
+    <section id="section-two">
+        <div id="maincontainer">
+            <ul class="tabs">
+                <li data-tab-target="#home" class="active tab"><i class="fa-solid fa-house"></i></li>
+                <li data-tab-target="#course1" class="tab">MATH 115</li>
+                <li data-tab-target="#course2" class="tab">MATH 117</li>
+                <li data-tab-target="#course3" class="tab">ECE 150</li>
+                <li data-tab-target="#course4" class="tab">ECE 105</li>
+                <li data-tab-target="#course5" class="tab">ENG 101</li>
+            </ul>
+        
+
+            <div id="home" data-tab-content class="active" data-tab-name="HOME">
+                <h2 id="hometext">Select a course and begin learning
+                    </h2>
+            </div>
+            <div id="course1" data-tab-content data-tab-name="math115">
+                <div class="container">
+                    <div class="textcontainer">
+                        <button class="recordButton"><i class="fa-solid fa-microphone"></i></button>
+                    </div>
+                    <div class="generatecontainer">
+                        <h1 id="result-textmath115" class="generatetext"></h1>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div onclick="swapCards115()" class="flashcardcontainer">
+                    <h1 id="card-textmath115">Math115flashcard</h1>
+                </div>
+                <button class="regenbutton" id="regen-textmath115"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+            <div id="course2" data-tab-content data-tab-name="math117">
+                <div class="container">
+                    <div class="textcontainer">
+                        <button class="recordButton"><i class="fa-solid fa-microphone"></i></button>
+                    </div>
+                    <div class="generatecontainer">
+                        <h1 id="result-textmath117" class="generatetext"></h1>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div onclick="swapCards117()" class="flashcardcontainer">
+                    <h1 id="card-textmath117">Math117flashcard</h1>
+                </div>
+                <button class="regenbutton" id="regen-textmath117"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+            <div id="course3" data-tab-content data-tab-name="ece150">
+                <div class="container">
+                    <div class="textcontainer">
+                        <button class="recordButton"><i class="fa-solid fa-microphone"></i></button>
+                    </div>
+                    <div class="generatecontainer">
+                        <h1 id="result-textece150" class="generatetext"></h1>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div onclick="swapCards150()" class="flashcardcontainer">
+                    <h1 id="card-textece150">Math115flashcard</h1>
+                </div>
+                <button class="regenbutton" id="regen-textece150"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+            <div id="course4" data-tab-content data-tab-name="ece105">
+                <div class="container">
+                    <div class="textcontainer">
+                        <button class="recordButton"><i class="fa-solid fa-microphone"></i></button>
+                    </div>
+                    <div class="generatecontainer">
+                        <h1 id="result-textece105" class="generatetext"></h1>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div onclick="swapCards105()" class="flashcardcontainer">
+                    <h1 id="card-textece105">Math115flashcard</h1>
+                </div>
+                <button class="regenbutton" id="regen-textece105"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+            <div id="course5" data-tab-content data-tab-name="eng101">
+                <div class="container">
+                    <div class="textcontainer">
+                        <button class="recordButton"><i class="fa-solid fa-microphone"></i></button>
+                    </div>
+                    <div class="generatecontainer">
+                        <h1 id="result-texteng101" class="generatetext"></h1>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div onclick="swapCards101()" class="flashcardcontainer">
+                    <h1 id="card-texteng101">Math115flashcard</h1>
+                </div>
+                <button class="regenbutton" id="regen-texteng101"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <div id="endcontainer">
+        <div id="endtextcontainer">
+            <h1 id="informationheader"><span class="gradienttext">Whats next?</span></h1>
+            <p id="endparagraph">Future improvements will focus on enhancing summarization accuracy, creating more personalized flashcards, and supporting multiple languages. Additional features like AI-driven topic clustering, automated quiz generation, and integration with study platforms aim to make learning more interactive and efficient, helping users better retain and apply knowledge.</p>
+        </div>
+        <img src="nimbus-notes-images/ai.png" id="aiImg">
+    </div>
+
+    </body>
+    </html>

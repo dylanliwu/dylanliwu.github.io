@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="#">
+
+     <!-- Title -->
+
+    <title>Dylan Li</title>
+
+    <!-- Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <!-- Header -->
+
+    <div class="header-container">
+        <h1 class="header-title">WEB PORTFOLIO</h1>
+        <div class="contact-container">
+            <a href="mailto:dylanli0419@gmail.com" class="email-button"><i class="fa-solid fa-envelope email-icon icon"></i></a>
+            <a href="https://www.linkedin.com/in/dylan-li-1a4890215/" class="linkedin-button"><i class="fa-brands fa-linkedin linkedin-icon icon"></i></a>
+        </div>
+        <div class="menu-container">
+            <button class="menu-button" id="menuButton" onclick="myFunction(this)">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </button>
+            <div class="menu-content" id="menuContent">
+                <a href="index.html"><button class="home-button" data-tooltip="Home"><i class="fa-solid fa-house"></i></button></a>
+                <a href="about.html"><button class="about-button" data-tooltip="About Me"><i class="fa-solid fa-user icon"></i></button></a>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Landing -->
+
+    <div class="landing-content">
+        <h1 class="main-landing-title">Dylan Li</h1>
+        <h2 class="sub-landing-title">Engineering Student / <i class="fa-solid fa-location-dot icon"></i> Ontario, Canada</h2>
+    </div>
+
+    <!-- Projects -->
+
+    <div class="projects-container" id="aaa">
+        <div class="main-project-title fade-in" id="primaryProjectTitle" style="display: block;">
+            <h2 class="main-project-title-text">Cool stuff I helped create.</h2>
+        </div>
+        <div class="nav-bar">
+            <button class="nav-button" id="navButton1" style="width: 30px;"></button>
+            <button class="nav-button" id="navButton2" style="width: 10px;"></button>
+            <button class="nav-button" id="navButton3" style="width: 10px;"></button>
+            <button class="nav-button" id="navButton4" style="width: 10px;"></button>
+        </div>
+        <div class="project" id="project1">
+            <div class="project-text-container">
+                <h3 class="project-title">Nimbus Notes</h3>
+                <h4 class="project-sub-title">MetaHacks • November 2024</h4>
+                <p class="project-text">Nimbus Notes is an AI powered tool that summarizes lectures and generates flashcards. Hackathon project, worked within a team of 3.</p>
+                <div class="chip-container">
+                    <div class="chip"><p class="chip-text">Llama API</p></div>
+                    <div class="chip"><p class="chip-text">HTML</p></div>
+                    <div class="chip"><p class="chip-text">CSS</p></div>
+                    <div class="chip"><p class="chip-text">JavaScript</p></div>
+                    <div class="chip"><p class="chip-text">Python</p></div>
+                </div>
+                <a href="Nimbus-Notes/nimbus-notes.html" class="project-button">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <video controls muted playsinline loop src="media/nimbus-notes-video.mp4" class="project-media"></video>
+        </div>
+        <div class="project" id="project2">
+            <div class="project-text-container">
+                <h3 class="project-title">Scam-Mah 123</h3>
+                <h4 class="project-sub-title">NewHacks • October 2024</h4>
+                <p class="project-text project-2-text">Scam-Mah detects scam calls while wasting the scammers time. Hackathon project, worked within a team of 4.</p>
+                <div class="chip-container">
+                    <div class="chip"><p class="chip-text">Gemini API</p></div>
+                    <div class="chip"><p class="chip-text">HTML</p></div>
+                    <div class="chip"><p class="chip-text">CSS</p></div>
+                    <div class="chip"><p class="chip-text">JavaScript</p></div>
+                    <div class="chip"><p class="chip-text">Flask</p></div>
+                </div>
+                <a href="Scam-Mah/scam-mah.html" class="project-button">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <video controls muted playsinline loop src="media/scam-mah-video.mp4" class="project-media"></video>
+        </div>
+        <div class="project" id="project3">
+            <div class="project-text-container">
+                <h3 class="project-title project-3-title">Airport Luggage Transport</h3>
+                <h4 class="project-sub-title">September 2024 - January 2025</h4>
+                <p class="project-text">My first McMaster engineering class project. Tasked with designing a mechanism that would safely transport luggage from A to B without exceeding the constrictions.</p>
+                <div class="chip-container">
+                    <div class="chip"><p class="chip-text">AutoDesk Inventor</p></div>
+                    <div class="chip"><p class="chip-text">Python</p></div>
+                </div>
+                <a href="1P13-Portfolio/engineering-portfolio.html" class="project-button">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <img src="media/1p13-image.png" class="project-media">
+        </div>
+        <div class="project" id="project4">
+            <div class="project-text-container">
+                <h3 class="project-title project-3-title">McMaster Medical Engineering Design Team</h3>
+                <h4 class="project-sub-title">October 2024 - Present</h4>
+                <p class="project-text">Sharing what McMaster's Medical Engineering Design Team is all about. Ongoing extracurricular, working alongside 1 developer.</p>
+                <div class="chip-container">
+                    <div class="chip"><p class="chip-text">React</p></div>
+                    <div class="chip"><p class="chip-text">Tailwind CSS</p></div>
+                    <div class="chip"><p class="chip-text">Next.js</p></div>
+                </div>
+                <a class="wip-project-button">Work In Progress</a>
+            </div>
+            <img src="media/med-t-image.jpeg" class="project-media">
+        </div>
+    </div>
+
+    <!-- Skils Stack -->
+
+    <div class="skills-stack-container">
+        <h2 class="skills-title">Languages & Tools</h2>
+        <div class="skills-container"><img src="media/python-icon.png" class="skills-icon"><p class="skills-text">Python</p></div>
+        <div class="skills-container"><img src="media/html-icon.png" class="skills-icon"><p class="skills-text">HTML</p></div>
+        <div class="skills-container"><img src="media/css-icon.png" class="skills-icon"><p class="skills-text">CSS</p></div>
+        <div class="skills-container"><img src="media/js-icon.png" class="skills-icon"><p class="skills-text">JavaScript</p></div>
+        <div class="skills-container"><img src="media/java-icon.png" class="skills-icon"><p class="skills-text">Java</p></div>
+        <div class="skills-container"><img src="media/react-icon.png" class="skills-icon"><p class="skills-text">React</p></div>
+        <div class="skills-container"><img src="media/tailwind-icon.png" class="skills-icon"><p class="skills-text">Tailwind</p></div>
+        <div class="skills-container"><img src="media/next-icon.png" class="skills-icon"><p class="skills-text">Next</p></div>
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

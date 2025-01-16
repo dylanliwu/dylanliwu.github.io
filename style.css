@@ -13,11 +13,11 @@ body {
 }
 
 :root {
-    --font-biggest: clamp(3rem, 7vw, 20rem);
+    --font-biggest: clamp(5rem, 7vw, 20rem);
     --font-bigger: clamp(1rem, 3vw, 17.5rem);
     --font-big: clamp(1rem, 2vw, 15rem);
-    --font-standard: clamp(0.5rem, 1vw, 12.5rem);
-    --font-small: clamp(0.3rem, 0.75vw, 10rem);
+    --font-standard: clamp(0.7rem, 1vw, 12.5rem);
+    --font-small: clamp(0.5rem, 0.75vw, 10rem);
 
     --color-light: rgb(150, 150, 150);
     --color-standard: rgb(70, 70, 70);
@@ -90,35 +90,41 @@ svg {
 .header-container {
     display: flex;
     justify-content: space-between;
-    margin: 5% 20% 10%;
+    width: 75%;
+    margin: 3% auto 7% auto
 }
 
 .header-title {
     font-family: "Cabin", serif;
-    font-size: 1.2rem;
-    color: var(--color-standard);
+    font-size: var(--font-standard);
     letter-spacing: 2px;
     opacity: 0;
     animation: slideDown 0.5s 0.5s ease-out forwards;
+    color: var(--color-standard);
 }
 
 .contact-container {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .email-button, .linkedin-button {
     background-color: transparent;
-    font-size: 1.5rem;
     opacity: 0;
     animation: slideDown 0.5s 0.5s ease-out forwards;
 }
 
 .email-icon, .linkedin-icon {
+    font-size: clamp(1rem, 1.3vw, 2rem);
     transition: 0.2s;
     &:hover, &:hover {
         color: rgb(255, 196, 0);
     }
+}
+
+.email-icon {
+    transform: scale(1.1);
+    margin-right: 10%;
 }
 
 .menu-button {
@@ -176,12 +182,11 @@ svg {
 
 /* Landing */
 
-.landing-content {
+.landing-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
     margin-bottom: 20%;
 }
 
@@ -194,10 +199,6 @@ svg {
 
 .red-clover {
     width: 10%;
-    transition: 1s;
-    &:hover {
-        transform: scale(1.1);
-    }
 }
 
 .red-clover-body {
@@ -214,17 +215,18 @@ svg {
 }
 
 .main-landing-title {
-    font-size: var(--font-biggest);
-    color: black;
     font-family: "Newreader", serif;
     font-style: italic;
+    font-size: var(--font-biggest);
+    color: black;
+    margin: auto;
 }
 
 .sub-landing-title {
     font-size: var(--font-standard);
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
-    color: var(--color-standard);
+    color: var(--color-dark);
 }
 
 /* Projects */
@@ -296,8 +298,6 @@ svg {
     scroll-snap-align: center;
     flex: 0 0 100%;
     max-width: 100%;
-    height: 60vh;
-    gap: 10%;
     padding: 7.5%;
     border-radius: 20px;
     background-color: var(--color-darkest);
@@ -378,11 +378,11 @@ svg {
 }
 
 .project-3-title {
-    font-size: 2rem;
+    font-size: var(--font-big);
 }
 
 .project-3-sub-title {
-    font-size: 0.8rem;
+    font-size: var(--font-big);
 }
 
 /* Skills */
@@ -436,8 +436,24 @@ svg {
 @media screen and (max-width: 900px) {
     .project {
         flex-direction: column;
+        gap: 0;
     }
     .project-media {
-        width: 100%;
+        margin-top: 10%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .landing-container {
+        margin-top: 20%;
+        margin-bottom: 30%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .landing-container {
+        margin-top: 40%;
+        margin-bottom: 40%;
     }
 }

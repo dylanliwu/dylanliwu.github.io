@@ -1,20 +1,20 @@
-const menuButton = document.getElementById("menuButton");
-const menuContent = document.getElementById("menuContent");
+// const menuButton = document.getElementById("menuButton");
+// const menuContent = document.getElementById("menuContent");
 
-menuButton.addEventListener("click", () => {
-    menuButton.classList.toggle("change");
-    menuContent.style.display = menuButton.classList.contains("change") ? "flex" : "none";
-});
+// menuButton.addEventListener("click", () => {
+//     menuButton.classList.toggle("change");
+//     menuContent.style.display = menuButton.classList.contains("change") ? "flex" : "none";
+// });
 
-const handleEvent = (event) => {
-  if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
-      menuButton.classList.remove("change");
-      menuContent.style.display = "none";
-  }
-};
+// const handleEvent = (event) => {
+//   if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
+//       menuButton.classList.remove("change");
+//       menuContent.style.display = "none";
+//   }
+// };
 
-document.addEventListener("click", handleEvent);
-document.addEventListener("scroll", handleEvent);
+// document.addEventListener("click", handleEvent);
+// document.addEventListener("scroll", handleEvent);
 
 const projectContainer = document.querySelector(".projects-container");
 

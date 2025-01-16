@@ -58,7 +58,7 @@ svg {
 
 @keyframes slideDown { 
     from { 
-        transform: translateY(-20%);
+        transform: translateY(-20px);
         opacity: 0; 
     } 
     to { 
@@ -279,7 +279,7 @@ svg {
     font-weight: 600;
     color: var(--color-dark);
     opacity: 0;
-    animation: slideDown 0.5s 0.75s ease-out forwards;
+    animation: slideDown 0.5s 1s ease-out forwards;
 }
 
 .fade-in {
@@ -301,7 +301,7 @@ svg {
     border-radius: 20px;
     background-color: var(--color-darkest);
     opacity: 0;
-    animation: slideDown 0.5s 0.75s ease-out forwards;
+    animation: slideDown 0.5s 1.25s ease-out forwards;
 }
 
 .project-text-container {

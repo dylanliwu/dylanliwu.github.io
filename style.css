@@ -14,7 +14,7 @@ body {
 
 :root {
     --font-biggest: clamp(5rem, 7vw, 20rem);
-    --font-bigger: clamp(1rem, 3vw, 17.5rem);
+    --font-bigger: clamp(1.5rem, 3vw, 17.5rem);
     --font-big: clamp(1rem, 2vw, 15rem);
     --font-standard: clamp(0.7rem, 1vw, 12.5rem);
     --font-small: clamp(0.5rem, 0.75vw, 10rem);
@@ -224,7 +224,7 @@ svg {
     text-align: center;
     color: var(--color-dark);
     opacity: 0;
-    animation: slideDown 0.5s 0.75s ease-out forwards;
+    animation: slideDown 0.5s 0.85s ease-out forwards;
 }
 
 /* Projects */
@@ -235,7 +235,7 @@ svg {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     margin-bottom: 15%;
-    gap: 100px;
+    gap: 5%;
     padding: 10% 10%;
 }
 
@@ -361,6 +361,7 @@ svg {
 }
 
 .wip-project-button {
+    font-size: var(--font-standard);
     width: 40%;
     font-size: 0.8rem;
     text-align: center;
@@ -377,62 +378,6 @@ svg {
 
 .project-2-text {
     font-size: var(--font-standard);
-}
-
-.project-3-title {
-    font-size: var(--font-big);
-}
-
-.project-3-sub-title {
-    font-size: var(--font-big);
-}
-
-/* Skills */
-
-.skills-title {
-    width: 100%;
-    font-size: var(--font-bigger);
-    text-align: center;
-    margin-bottom: 3%;
-    color: var(--color-dark);
-}
-
-.skills-stack-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 100%;
-    gap: 2%;
-    margin: 15% 10%;
-}
-
-.skills-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 1%;
-    border-radius: 5px;
-    transition: 0.3s;
-    &:hover {
-        background-color: var(--color-dark);
-    }
-    &:hover > .skills-icon {
-        scale: 1.25;
-    }
-    &:hover > .skills-text {
-        color: white;
-    }
-}
-
-.skills-icon {
-    width: 30px;
-    filter: brightness(90%);
-    transition: 0.75s;
-}
-
-.skills-text {
-    font-size: var(--font-standard);
-    color: var(--color-dark);
 }
 
 @media screen and (max-width: 900px) {

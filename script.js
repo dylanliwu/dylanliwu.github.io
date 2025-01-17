@@ -23,6 +23,7 @@ const boxes = document.querySelectorAll(".project");
 const navButton1 = document.getElementById("navButton1");
 const navButton2 = document.getElementById("navButton2");
 const navButton3 = document.getElementById("navButton3");
+const navButton4 = document.getElementById("navButton4");
 
 const primaryProjectTitle = document.getElementById("primaryProjectTitle");
 
@@ -41,6 +42,7 @@ projectContainer.addEventListener("scroll", () => {
       navButton1.style.width = '30px';
       navButton2.style.width = '10px';
       navButton3.style.width = '10px';
+      navButton4.style.width = '10px';
       primaryProjectTitle.classList.remove("fade-out")
       primaryProjectTitle.classList.add("fade-in")
     }
@@ -49,6 +51,7 @@ projectContainer.addEventListener("scroll", () => {
       navButton1.style.width = '10px';
       navButton2.style.width = '30px';
       navButton3.style.width = '10px';
+      navButton4.style.width = '10px';
       primaryProjectTitle.classList.remove("fade-in")
       primaryProjectTitle.classList.add("fade-out")
     }
@@ -57,6 +60,16 @@ projectContainer.addEventListener("scroll", () => {
       navButton1.style.width = '10px';
       navButton2.style.width = '10px';
       navButton3.style.width = '30px';
+      navButton4.style.width = '10px';
+      primaryProjectTitle.classList.remove("fade-in")
+      primaryProjectTitle.classList.add("fade-out")
+    }
+    if (box.id.indexOf("project4") !== -1 && isVisible(box)) {
+      index = 4;
+      navButton1.style.width = '10px';
+      navButton2.style.width = '10px';
+      navButton3.style.width = '10px';
+      navButton4.style.width = '30px';
       primaryProjectTitle.classList.remove("fade-in")
       primaryProjectTitle.classList.add("fade-out")
     }
@@ -73,4 +86,5 @@ function scrollToProject(targetIndex) {
 navButton1.addEventListener("click", () => scrollToProject(1));
 navButton2.addEventListener("click", () => scrollToProject(2));
 navButton3.addEventListener("click", () => scrollToProject(3));
+navButton4.addEventListener("click", () => scrollToProject(4));
 

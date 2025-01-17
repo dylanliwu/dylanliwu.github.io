@@ -14,10 +14,11 @@ body {
 
 :root {
     --font-biggest: clamp(5rem, 7vw, 20rem);
-    --font-bigger: clamp(1.5rem, 3vw, 17.5rem);
+    --font-bigger: clamp(1.25rem, 3vw, 17.5rem);
     --font-big: clamp(1rem, 2vw, 15rem);
-    --font-standard: clamp(0.7rem, 1vw, 12.5rem);
+    --font-standard: clamp(0.6rem, 1vw, 12.5rem);
     --font-small: clamp(0.5rem, 0.75vw, 10rem);
+    --font-smaller: clamp(0.4rem, 0.7vw, 7rem);
 
     --color-light: rgb(150, 150, 150);
     --color-standard: rgb(70, 70, 70);
@@ -315,7 +316,8 @@ svg {
     margin-bottom: 5%;
 }
 
-.project-sub-title {
+.sub-project-title {
+    font-size: var(--font-small);
     letter-spacing: 0.1ch;
     margin-bottom: 5%;
     color: var(--color-standard);
@@ -328,24 +330,25 @@ svg {
 
 .chip-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 7.5%;
 }
 
 .chip {
-    padding: 10px 10px;
+    padding: 2% 2%;
     border-radius: 5px;
     background-color: var(--color-darker);
 }
 
 .chip-text {
-    font-size: var(--font-small);
+    font-size: var(--font-smaller);
     color: white;
 }
 
 .project-button {
     max-width: 40%;
-    min-width: 75px;
+    min-width: 50px;
     font-size: var(--font-standard);
     text-align: center;
     padding: 3%;
@@ -376,7 +379,7 @@ svg {
     border-radius: 10px;
 }
 
-.project-2-text {
+.project-3-text {
     font-size: var(--font-standard);
 }
 
@@ -391,6 +394,9 @@ svg {
     }
     .project-text-container {
         padding-right: 0;
+    }
+    .project-button {
+        border-radius: 5px;
     }
 }
 

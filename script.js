@@ -24,6 +24,7 @@ const navButton1 = document.getElementById("navButton1");
 const navButton2 = document.getElementById("navButton2");
 const navButton3 = document.getElementById("navButton3");
 const navButton4 = document.getElementById("navButton4");
+const navButton5 = document.getElementById("navButton5");
 
 const primaryProjectTitle = document.getElementById("primaryProjectTitle");
 
@@ -43,6 +44,7 @@ projectContainer.addEventListener("scroll", () => {
       navButton2.style.width = '10px';
       navButton3.style.width = '10px';
       navButton4.style.width = '10px';
+      navButton5.style.width = '10px';
       primaryProjectTitle.classList.remove("fade-out")
       primaryProjectTitle.classList.add("fade-in")
     }
@@ -52,6 +54,7 @@ projectContainer.addEventListener("scroll", () => {
       navButton2.style.width = '30px';
       navButton3.style.width = '10px';
       navButton4.style.width = '10px';
+      navButton5.style.width = '10px';
       primaryProjectTitle.classList.remove("fade-in")
       primaryProjectTitle.classList.add("fade-out")
     }
@@ -61,8 +64,7 @@ projectContainer.addEventListener("scroll", () => {
       navButton2.style.width = '10px';
       navButton3.style.width = '30px';
       navButton4.style.width = '10px';
-      primaryProjectTitle.classList.remove("fade-in")
-      primaryProjectTitle.classList.add("fade-out")
+      navButton5.style.width = '10px';
     }
     if (box.id.indexOf("project4") !== -1 && isVisible(box)) {
       index = 4;
@@ -70,8 +72,15 @@ projectContainer.addEventListener("scroll", () => {
       navButton2.style.width = '10px';
       navButton3.style.width = '10px';
       navButton4.style.width = '30px';
-      primaryProjectTitle.classList.remove("fade-in")
-      primaryProjectTitle.classList.add("fade-out")
+      navButton5.style.width = '10px';
+    }
+    if (box.id.indexOf("project5") !== -1 && isVisible(box)) {
+      index = 5;
+      navButton1.style.width = '10px';
+      navButton2.style.width = '10px';
+      navButton3.style.width = '10px';
+      navButton4.style.width = '10px';
+      navButton5.style.width = '30px';
     }
   });
 });
@@ -87,4 +96,5 @@ navButton1.addEventListener("click", () => scrollToProject(1));
 navButton2.addEventListener("click", () => scrollToProject(2));
 navButton3.addEventListener("click", () => scrollToProject(3));
 navButton4.addEventListener("click", () => scrollToProject(4));
+navButton5.addEventListener("click", () => scrollToProject(5));
 

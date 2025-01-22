@@ -19,6 +19,7 @@ body {
     --font-standard: clamp(0.6rem, 1vw, 12.5rem);
     --font-small: clamp(0.5rem, 0.75vw, 10rem);
     --font-smaller: clamp(0.4rem, 0.7vw, 7rem);
+    --font-smallest: clamp(0.2rem, 0.6vw, 6rem);
 
     --color-light: rgb(150, 150, 150);
     --color-standard: rgb(70, 70, 70);
@@ -86,6 +87,18 @@ svg {
     }
 }
 
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes stabilize {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
 /* Header */
 
 .header-container {
@@ -102,14 +115,15 @@ svg {
     font-size: var(--font-standard);
     letter-spacing: 2px;
     color: var(--color-standard);
+    text-transform: uppercase;
 }
 
 .contact-container {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
-.email-icon, .linkedin-icon {
+.email-icon, .linkedin-icon, .github-icon {
     font-size: clamp(1rem, 1.3vw, 2rem);
     transition: 0.2s;
     &:hover, &:hover {
@@ -235,8 +249,8 @@ svg {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    margin-bottom: 15%;
-    gap: 5%;
+    margin-bottom: 10%;
+    gap: 7.5%;
     padding: 10% 10%;
 }
 
@@ -349,7 +363,7 @@ svg {
 .project-button {
     max-width: 40%;
     min-width: 50px;
-    font-size: var(--font-standard);
+    font-size: var(--font-small);
     text-align: center;
     padding: 3%;
     border: 0;
@@ -381,6 +395,91 @@ svg {
 
 .project-3-text {
     font-size: var(--font-standard);
+}
+
+.tech-stack-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto 20% auto;
+}
+
+.tech-stack-title {
+    font-size: var(--font-bigger);
+    color: black;
+}
+
+.tech-stack-subtitle {
+    color: black;
+    margin-bottom: 5%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    gap: 1%;
+    row-gap: 5px;
+}
+
+.tech-stack-icon {
+    max-width: 45px;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+.tech-stack-chip {
+    opacity: 0.95;
+    width: 25%;
+    background-color: var(--color-darkest);
+    padding: 1.5%;
+    display: flex;
+    gap: 5%;
+    border-radius: 12px;
+    border: 2px solid white;
+    transition: 0.3s;
+    &:hover {
+        background-color: var(--color-dark);
+        border: 2px inset rgb(196, 196, 196);
+    }
+}
+
+.html-icon {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.css-icon {
+    background-color: rgba(0, 119, 255, 0.1);
+}
+
+.js-icon {
+    background-color: rgba(255, 174, 0, 0.1);
+}
+
+.python-icon {
+    background-color: rgba(0, 153, 255, 0.1);
+}
+
+.java-icon {
+    background-color: rgba(0, 89, 255, 0.1);
+}
+
+.react-icon {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.tailwind-icon {
+    background-color: rgba(0, 195, 255, 0.1);
+}
+
+.next-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-stack-chip-subtext {
+    font-size: var(--font-smallest);
+    color: var(--color-light);
 }
 
 @media screen and (max-width: 900px) {

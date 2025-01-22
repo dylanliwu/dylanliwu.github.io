@@ -33,14 +33,14 @@
 
 </head>
 <body>
-
     <!-- Header -->
 
     <div class="header-container">
-        <h1 class="header-title">WEB PORTFOLIO</h1>
+        <h1 class="header-title">portfolio</h1>
         <div class="contact-container">
             <a href="mailto:dylanli0419@gmail.com" class="email-button"><i class="fa-solid fa-envelope email-icon icon"></i></a>
             <a href="https://www.linkedin.com/in/dylan-li-1a4890215/" class="linkedin-button"><i class="fa-brands fa-linkedin linkedin-icon icon"></i></a>
+            <a href="https://github.com/dylanliwu" class="github-button"><i class="fa-brands fa-github github-icon icon"></i></a>
         </div>
         <!-- <div class="menu-container">
             <button class="menu-button" id="menuButton" onclick="myFunction(this)">
@@ -106,16 +106,33 @@
 
     <div class="projects-container">
         <div class="main-project-title fade-in" id="primaryProjectTitle" style="display: block;">
-            <h2 class="main-project-title-text">Cool stuff I helped create.</h2>
+            <h2 class="main-project-title-text">My Projects</h2>
         </div>
         <div class="nav-bar">
             <button class="nav-button" id="navButton1" style="width: 30px;"></button>
             <button class="nav-button" id="navButton2" style="width: 10px;"></button>
             <button class="nav-button" id="navButton3" style="width: 10px;"></button>
             <button class="nav-button" id="navButton4" style="width: 10px;"></button>
+            <button class="nav-button" id="navButton5" style="width: 10px;"></button>
         </div>
 
         <div class="project" id="project1">
+            <div class="project-text-container">
+                <h3 class="project-title">TaskForce</h3>
+                <h4 class="sub-project-title">UofTHacks • January 2025</h4>
+                <p class="project-text">TaskForce leverages social competition to make you more productive</p>
+                <div class="chip-container">
+                    <div class="chip"><p class="chip-text">Gemini API</p></div>
+                    <div class="chip"><p class="chip-text">HTML</p></div>
+                    <div class="chip"><p class="chip-text">CSS</p></div>
+                    <div class="chip"><p class="chip-text">JavaScript</p></div>
+                    <div class="chip"><p class="chip-text">Node.js</p></div>
+                </div>
+                <a href="https://dorahacks.io/buidl/21726" class="project-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <video controls muted playsinline loop src="media/taskforce-video.mp4#t=23" class="project-media"></video>
+        </div>
+        <div class="project" id="project2">
             <div class="project-text-container">
                 <h3 class="project-title">Med ID</h3>
                 <h4 class="sub-project-title">DeltaHacks • January 2025</h4>
@@ -126,11 +143,11 @@
                     <div class="chip"><p class="chip-text">CSS</p></div>
                     <div class="chip"><p class="chip-text">JavaScript</p></div>
                 </div>
-                <a href="" class="project-button">View <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://devpost.com/software/medid-a-faster-way-to-retrieve-critical-information" class="project-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <video controls muted playsinline loop src="media/med-id-video.mp4#t=1" class="project-media"></video>
         </div>
-        <div class="project" id="project2">
+        <div class="project" id="project3">
             <div class="project-text-container">
                 <h3 class="project-title">Nimbus Notes</h3>
                 <h4 class="sub-project-title">MetaHacks • November 2024</h4>
@@ -146,7 +163,7 @@
             </div>
             <video controls muted playsinline loop src="media/nimbus-notes-video.mp4#t=0.001" class="project-media"></video>
         </div>
-        <div class="project" id="project3">
+        <div class="project" id="project4">
             <div class="project-text-container">
                 <h3 class="project-title">Scam-Mah</h3>
                 <h4 class="sub-project-title">NewHacks • October 2024</h4>
@@ -158,11 +175,11 @@
                     <div class="chip"><p class="chip-text">JavaScript</p></div>
                     <div class="chip"><p class="chip-text">Flask</p></div>
                 </div>
-                <a href="Scam-Mah/scam-mah.html" class="project-button">View <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://devpost.com/software/scam-mah" class="project-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <video controls muted playsinline loop src="media/scam-mah-video.mp4#t=0.001" class="project-media"></video>
         </div>
-        <div class="project" id="project4">
+        <div class="project" id="project5">
             <div class="project-text-container">
                 <h3 class="project-title">McMaster Medical Engineering Design Team</h3>
                 <h4 class="sub-project-title">October 2024 - Present</h4>
@@ -176,6 +193,53 @@
             </div>
             <img src="media/med-t-image.jpeg" class="project-media">
         </div>
+    </div>
+
+
+    <div class="tech-stack-container">
+        <h2 class="tech-stack-title">Technologies</h2>
+        <p class="tech-stack-subtitle">Evergrowing list of programming languages, frameworks, libraries, and tools I know</p>
+            <div class="row">
+                <div class="tech-stack-chip">
+                    <img src="media/html-icon.png" class="tech-stack-icon html-icon">
+                    <p class="tech-stack-subtext">HTML<br><span class="tech-stack-chip-subtext">Programming Language</span></>
+                </div>
+                <div class="tech-stack-chip">
+                    <img src="media/css-icon.png" class="tech-stack-icon css-icon">
+                    <p>CSS<br><span class="tech-stack-chip-subtext">Programming Language</span></p>
+                </div>
+                <div class="tech-stack-chip">
+                    <img src="media/js-icon.png" class="tech-stack-icon js-icon">
+                    <p>JavaScript<br><span class="tech-stack-chip-subtext">Programming Language</span></p>
+                </div>
+                <div class="tech-stack-chip">
+                    <img src="media/python-icon.png" class="tech-stack-icon python-icon">
+                    <p>Python<br><span class="tech-stack-chip-subtext">Programming Language</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="tech-stack-chip">
+                    <img src="media/java-icon.png" class="tech-stack-icon java-icon">
+                    <p>Java<br><span class="tech-stack-chip-subtext">Programming Language</span></p>
+                </div>
+                <div class="tech-stack-chip">
+                    <img src="media/react-icon.png" class="tech-stack-icon react-icon">
+                    <p>React<br><span class="tech-stack-chip-subtext">JavaScript Framework</span></p>
+                </div>
+                <div class="tech-stack-chip">
+                    <img src="media/tailwind-icon.png" class="tech-stack-icon tailwind-icon">
+                    <p>Tailwind<br><span class="tech-stack-chip-subtext">CSS Library</span></p>
+                </div>
+                <div class="tech-stack-chip">
+                    <img src="media/next-icon.png" class="tech-stack-icon next-icon">
+                    <p>Next.js<br><span class="tech-stack-chip-subtext">JavaScript Framework</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-container">
+        <h2 class="work-title">Work Experience</h2>
     </div>
 
     <!-- JavaScript -->

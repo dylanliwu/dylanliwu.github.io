@@ -378,7 +378,7 @@ svg {
 }
 
 .wip-project-button {
-    font-size: var(--font-standard);
+    font-size: var(--font-small);
     width: 40%;
     font-size: 0.8rem;
     text-align: center;
@@ -402,7 +402,7 @@ svg {
     flex-direction: column;
     row-gap: 10px;
     flex-wrap: wrap;
-    width: 60%;
+    width: 75%;
     margin: 0 auto 20% auto;
 }
 
@@ -437,11 +437,10 @@ svg {
     display: flex;
     gap: 5%;
     border-radius: 12px;
-    border: 2px solid white;
     transition: 0.3s;
     &:hover {
-        background-color: var(--color-dark);
-        border: 2px inset rgb(196, 196, 196);
+        background-color: black;
+        scale: 1.01;
     }
 }
 

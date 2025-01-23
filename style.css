@@ -440,7 +440,6 @@ svg {
     transition: 0.3s;
     &:hover {
         background-color: black;
-        scale: 1.01;
     }
 }
 

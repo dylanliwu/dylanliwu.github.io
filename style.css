@@ -16,10 +16,10 @@ body {
     --font-biggest: clamp(5rem, 7vw, 20rem);
     --font-bigger: clamp(1.25rem, 3vw, 17.5rem);
     --font-big: clamp(1rem, 2vw, 15rem);
-    --font-standard: clamp(0.9rem, 1vw, 12.5rem);
-    --font-small: clamp(0.8rem, 0.75vw, 10rem);
-    --font-smaller: clamp(0.75rem, 0.7vw, 7rem);
-    --font-smallest: clamp(0.5rem, 0.6vw, 6rem);
+    --font-standard: clamp(0.5rem, 1vw, 12.5rem);
+    --font-small: clamp(0.5rem, 0.75vw, 10rem);
+    --font-smaller: clamp(0.4rem, 0.7vw, 7rem);
+    --font-smallest: clamp(0.3rem, 0.6vw, 6rem);
 
     --color-light: rgb(150, 150, 150);
     --color-standard: rgb(70, 70, 70);
@@ -252,7 +252,6 @@ svg {
     margin-bottom: 10%;
     gap: 7.5%;
     padding: 10% 10%;
-    align-items: flex-start;
 }
 
 .nav-bar {
@@ -518,6 +517,7 @@ svg {
     }
     .nav-button:hover {
         background-color: var(--color-standard);
+        scale: 1;
     }
 }
 

@@ -16,10 +16,10 @@ body {
     --font-biggest: clamp(5rem, 7vw, 20rem);
     --font-bigger: clamp(1.25rem, 3vw, 17.5rem);
     --font-big: clamp(1rem, 2vw, 15rem);
-    --font-standard: clamp(0.6rem, 1vw, 12.5rem);
-    --font-small: clamp(0.5rem, 0.75vw, 10rem);
-    --font-smaller: clamp(0.4rem, 0.7vw, 7rem);
-    --font-smallest: clamp(0.2rem, 0.6vw, 6rem);
+    --font-standard: clamp(0.9rem, 1vw, 12.5rem);
+    --font-small: clamp(0.8rem, 0.75vw, 10rem);
+    --font-smaller: clamp(0.75rem, 0.7vw, 7rem);
+    --font-smallest: clamp(0.5rem, 0.6vw, 6rem);
 
     --color-light: rgb(150, 150, 150);
     --color-standard: rgb(70, 70, 70);
@@ -414,6 +414,7 @@ svg {
 .tech-stack-subtitle {
     color: black;
     margin-bottom: 5%;
+    font-size: var(--font-standard);
 }
 
 .row {
@@ -424,22 +425,24 @@ svg {
 }
 
 .tech-stack-icon {
+    width: 50%;
     max-width: 45px;
-    padding: 3%;
+    padding: 2.5%;
     border-radius: 5px;
 }
 
 .tech-stack-chip {
     opacity: 0.95;
-    width: 25%;
+    flex: 1 1 25%;
     background-color: var(--color-darkest);
-    padding: 1.5%;
+    padding: 20px;
     display: flex;
     gap: 5%;
     border-radius: 12px;
     transition: 0.3s;
     &:hover {
         background-color: black;
+        transform: translateY(-2px);
     }
 }
 
@@ -475,6 +478,10 @@ svg {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.tech-stack-chip-text {
+    font-size: var(--font-small);
+}
+
 .tech-stack-chip-subtext {
     font-size: var(--font-smallest);
     color: var(--color-light);
@@ -494,6 +501,22 @@ svg {
     }
     .project-button {
         border-radius: 5px;
+    }
+    .tech-stack-chip-text {
+        display: none;
+    }
+    .tech-stack-chip-subtext {
+        display: none;
+    }
+    .tech-stack-chip {
+        padding: 10px 0 10px 0;
+        justify-content: center;
+    }
+    .projects-container {
+        margin-bottom: 50%;
+    }
+    .tech-stack-icon {
+        padding: 5px;
     }
 }
 

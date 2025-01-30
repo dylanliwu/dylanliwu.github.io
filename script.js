@@ -86,10 +86,12 @@ projectContainer.addEventListener("scroll", () => {
 });
 
 function scrollToProject(targetIndex) {
-  projectContainer.scrollBy({
-    left: (screen.width - screen.width * 0.15) * (targetIndex - index),
-    behavior: "smooth",
-  });
+  if (window.matchMedia("(min-width: 1000px)").matches) {
+    projectContainer.scrollBy({
+      left: (screen.width - screen.width * 0.15) * (targetIndex - index),
+      behavior: "smooth",
+    });
+  }
 }
 
 navButton1.addEventListener("click", () => scrollToProject(1));
@@ -97,4 +99,5 @@ navButton2.addEventListener("click", () => scrollToProject(2));
 navButton3.addEventListener("click", () => scrollToProject(3));
 navButton4.addEventListener("click", () => scrollToProject(4));
 navButton5.addEventListener("click", () => scrollToProject(5));
+
 

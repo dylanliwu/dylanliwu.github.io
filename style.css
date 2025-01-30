@@ -17,8 +17,8 @@ body {
     --font-bigger: clamp(1.25rem, 3vw, 17.5rem);
     --font-big: clamp(1rem, 2vw, 15rem);
     --font-standard: clamp(0.5rem, 1vw, 12.5rem);
-    --font-small: clamp(0.5rem, 0.75vw, 10rem);
-    --font-smaller: clamp(0.4rem, 0.7vw, 7rem);
+    --font-small: clamp(0.4rem, 0.75vw, 10rem);
+    --font-smaller: clamp(0.35rem, 0.7vw, 7rem);
     --font-smallest: clamp(0.3rem, 0.6vw, 6rem);
 
     --color-light: rgb(150, 150, 150);

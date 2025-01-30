@@ -1,6 +1,8 @@
+
 body {
     font-family: "Inter", serif;
     background-color: white;
+    overflow: overlay;
 }
 
 * { 
@@ -11,6 +13,17 @@ body {
     box-sizing: border-box;
     /* border: grey 1px solid; */
 }
+
+::-webkit-scrollbar {
+    background-color: var(--color-darkest);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd000;
+    border-radius: 15px;
+}
+
 
 :root {
     --font-biggest: clamp(5rem, 7vw, 20rem);
@@ -120,20 +133,16 @@ svg {
 
 .contact-container {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .email-icon, .linkedin-icon, .github-icon {
     font-size: clamp(1rem, 1.3vw, 2rem);
     transition: 0.2s;
-    &:hover, &:hover {
+    &:hover {
         color: rgb(255, 196, 0);
+        transform: translateY(-3px);
     }
-}
-
-.email-icon {
-    transform: scale(1.1);
-    margin-right: 10%;
 }
 
 .menu-button {

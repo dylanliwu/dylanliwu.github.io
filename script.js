@@ -100,4 +100,3 @@ navButton3.addEventListener("click", () => scrollToProject(3));
 navButton4.addEventListener("click", () => scrollToProject(4));
 navButton5.addEventListener("click", () => scrollToProject(5));
 
-

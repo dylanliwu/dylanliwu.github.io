@@ -252,6 +252,7 @@ svg {
     margin-bottom: 10%;
     gap: 7.5%;
     padding: 10% 10%;
+    align-items: flex-start;
 }
 
 .nav-bar {
@@ -496,9 +497,6 @@ svg {
         margin-top: 10%;
         max-width: 100%;
     }
-    .project-text-container {
-        padding-right: 0;
-    }
     .project-button {
         border-radius: 5px;
     }
@@ -513,7 +511,7 @@ svg {
         justify-content: center;
     }
     .projects-container {
-        margin-bottom: 50%;
+        margin-bottom: 25%;
     }
     .tech-stack-icon {
         padding: 5px;

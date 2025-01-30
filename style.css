@@ -518,6 +518,9 @@ svg {
     .tech-stack-icon {
         padding: 5px;
     }
+    .nav-button:hover {
+        background-color: var(--color-standard);
+    }
 }
 
 @media screen and (max-width: 1200px) {

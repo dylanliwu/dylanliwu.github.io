@@ -86,7 +86,7 @@ projectContainer.addEventListener("scroll", () => {
 });
 
 function scrollToProject(targetIndex) {
-  if (window.matchMedia("(min-width: 1000px)").matches) {
+  if (window.matchMedia("(min-width: 900px)").matches) {
     projectContainer.scrollBy({
       left: (screen.width - screen.width * 0.15) * (targetIndex - index),
       behavior: "smooth",

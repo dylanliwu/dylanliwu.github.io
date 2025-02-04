@@ -14,17 +14,6 @@ body {
     /* border: grey 1px solid; */
 }
 
-::-webkit-scrollbar {
-    background-color: var(--color-darkest);
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #ffd000;
-    border-radius: 15px;
-}
-
-
 :root {
     --font-biggest: clamp(5rem, 7vw, 20rem);
     --font-bigger: clamp(1.25rem, 3vw, 17.5rem);

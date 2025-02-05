@@ -18,7 +18,7 @@ body {
     --font-biggest: clamp(5rem, 7vw, 20rem);
     --font-bigger: clamp(1.25rem, 3vw, 17.5rem);
     --font-big: clamp(1rem, 2vw, 15rem);
-    --font-standard: clamp(0.5rem, 1vw, 12.5rem);
+    --font-standard: clamp(0.5rem, 0.9vw, 12.5rem);
     --font-small: clamp(0.4rem, 0.75vw, 10rem);
     --font-smaller: clamp(0.35rem, 0.7vw, 7rem);
     --font-smallest: clamp(0.3rem, 0.6vw, 6rem);
@@ -122,11 +122,11 @@ svg {
 
 .contact-container {
     display: flex;
-    gap: 20px;
+    gap: 20%;
 }
 
 .email-icon, .linkedin-icon, .github-icon {
-    font-size: clamp(1rem, 1.3vw, 2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
     transition: 0.2s;
     &:hover {
         color: rgb(255, 196, 0);
@@ -350,7 +350,7 @@ svg {
 .chip {
     padding: 2% 2%;
     border-radius: 5px;
-    background-color: var(--color-darker);
+    background-color: var(--color-dark);
 }
 
 .chip-text {
@@ -377,6 +377,7 @@ svg {
 
 .wip-project-button {
     background-color: var(--color-dark);
+    pointer-events: none;
 }
 
 .project-media {

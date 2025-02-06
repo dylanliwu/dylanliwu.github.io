@@ -45,21 +45,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 700px;
-    height: 500px;
+    width: 50%;
     background-color: var(--color-black);
     border-radius: var(--rounded-standard);
+    padding: 2% 0 2% 0;
 }
 
-textarea {
-    width: 400px;
+.text-input-box {
+    width: 80%;
     background-color: var(--color-dark);
     border-radius: var(--rounded-standard);
     resize: none;
-    padding: 5%;
-    transition: width 0.3s ease-in-out; /* Smooth transition */
+    padding: 3%;
+    transition: width 0.3s ease-in-out;
 }
 
-textarea:not(placeholder-shown) {
-    width: 500px; /* Expands when the user types */
+.text-input-box:focus,
+.text-input-box:not(:placeholder-shown) {
+    width: 90%;
 }

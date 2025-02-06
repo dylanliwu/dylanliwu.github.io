@@ -427,10 +427,14 @@ svg {
     color: var(--color-light);
 }
 
+.footer-container {
+    width: 100%;
+    text-align: center;
+}
+
 .footer-text {
     font-size: var(--font-smallest);
     color: var(--color-darkest);
-    text-align: center;
     margin-bottom: 10px;
 }
 

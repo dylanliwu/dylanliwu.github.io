@@ -5,8 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
         <link rel="shortcut icon" href="#">
-
-        <title>Dylan Li's UI Library</title>
+    
+         <!-- Title -->
+    
+        <title>About Me</title>
+    
+        <!-- Font -->
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +25,7 @@
     
         <!-- CSS -->
     
-        <link rel="stylesheet" href="library.css">
+        <link rel="stylesheet" href="about.css">
     
         <!-- Font Awesome -->
     
@@ -30,14 +34,28 @@
     </head>
 <body>
 
-    <div class="box-container">
-        <div class="row">
-            <div class="box">
-                <div class="text-input-box"><textarea placeholder="Type..."></textarea></div>
-            </div>
-            <div class="box"></div>
-        </div>
-    </div>
+    <a href="../index.html"><i class="fa-solid fa-arrow-left back-arrow"></i></a>
     
+    <div class="image-container">
+        <img src="../media/food-image.jpeg" class="image food-image" data-value="0.001">
+        <img src="../media/myself-image.png" class="image myself-image" data-value="0.002">
+        <img src="../media/rock-climb-image.jpeg" class="image rock-climb-image" data-value="0.001">
+    </div>
+
+    <div class="text-container">
+        <h2>Hi, I'm Dylan,<br><p>an Engineering Student at <a href="https://www.eng.mcmaster.ca/">McMaster University.</a></p></h2>
+        <p>I'm interested in software engineering, especially in visual design and user experience. My experience with hackathons and team coding projects has improved my collaboration and organizational skills in software development. As a designer I value minimalism, attention to detail, and ease of use. Outside of school and coding I love to cook and rock climb.</p>
+    </div>
+
+    <!-- <div class="footer-container">
+        <h2 class="footer-text" id="footerText"></h2>
+    </div> -->
+
+
+    <!-- JavaScript -->
+
+    <script src="about.js"></script>
+
+
 </body>
 </html>

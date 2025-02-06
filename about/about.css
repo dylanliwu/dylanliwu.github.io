@@ -1,0 +1,149 @@
+body {
+    font-family: "Inter", serif;
+    background-color: white;
+    overflow: overlay;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    /* border: grey 1px solid; */
+}
+
+:root {
+    --font-biggest: clamp(5rem, 7vw, 20rem);
+    --font-bigger: clamp(1.25rem, 3vw, 17.5rem);
+    --font-big: clamp(1rem, 2vw, 15rem);
+    --font-standard: clamp(0.5rem, 0.9vw, 12.5rem);
+    --font-small: clamp(0.4rem, 0.75vw, 10rem);
+    --font-smaller: clamp(0.35rem, 0.7vw, 7rem);
+    --font-smallest: clamp(0.3rem, 0.6vw, 6rem);
+
+    --color-light: rgb(150, 150, 150);
+    --color-standard: rgb(70, 70, 70);
+    --color-dark: rgb(40, 40, 40);
+    --color-darker: rgb(20, 20, 20);
+    --color-darkest: rgb(15, 15, 15);
+}
+
+.icon {
+    color: rgb(150, 150, 150);
+}
+
+@keyframes slideDown { 
+    from { 
+        transform: translateY(-20px);
+        opacity: 0; 
+    } 
+    to { 
+        transform: translateY(0); 
+        opacity: 1; 
+    } 
+}
+
+@keyframes slideLeft { 
+    from { 
+        transform: translateX(20px);
+        opacity: 0; 
+    } 
+    to { 
+        transform: translateX(0); 
+        opacity: 1; 
+    } 
+}
+
+.back-arrow {
+    color: var(--color-light);
+    position: absolute;
+    top: 5vw;
+    left: 6vw;
+    font-size: clamp(1.5rem, 3vw, 5rem);
+    z-index: 1;
+    transition: 0.2s;
+    opacity: 0;
+    animation: slideLeft 1s 1.1s forwards;
+    &:hover {
+        scale: 1.1;
+        color: black;
+    }
+
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0 5% 0;
+    gap: 1%;
+    opacity: 0;
+    animation: slideDown 0.5s 0.5s ease-out forwards;
+}
+
+.image {
+    position: relative;
+    max-width: 20%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 5px rgb(230, 230, 230);
+}
+
+.rock-climb-image {
+    width: 17%;
+}
+
+.food-image {
+    width: 15%;
+}
+
+h2 {
+    font-size: var(--font-big);
+    margin-bottom: 3%;
+}
+
+p {
+    font-size: var(--font-standard);
+}
+
+.text-container {
+    margin: 0 auto 10% auto;
+    text-align: center;
+    width: 50%;
+    opacity: 0;
+    animation: slideDown 0.6s 0.8s ease-out forwards;
+    letter-spacing: 0.125ch;
+}
+
+.footer-container {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: var(--font-smallest);
+    color: var(--color-darkest);
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .image-container {
+        margin-top: 20%;
+    }
+    .back-arrow {
+        top: 8vw;
+        left: 9vw;
+    }
+    .food-image {
+        display: none;
+    }
+    .rock-climb-image {
+        display: none;
+    }
+    .image {
+        max-width: 50%;
+    }
+    .text-container {
+        width: 60%;
+    }
+}

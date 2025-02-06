@@ -104,6 +104,7 @@ svg {
 /* Header */
 
 .header-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 75%;
@@ -122,7 +123,7 @@ svg {
 
 .contact-container {
     display: flex;
-    gap: 20%;
+    gap: 10px;
 }
 
 .email-icon, .linkedin-icon, .github-icon {
@@ -131,59 +132,6 @@ svg {
     &:hover {
         color: rgb(255, 196, 0);
         transform: translateY(-3px);
-    }
-}
-
-.menu-button {
-    background-color: transparent;
-    opacity: 0;
-    animation: slideDown 0.5s 0.5s ease-out forwards;
-    &:hover .bar-1, &:hover .bar-2, &:hover .bar-3  {
-        background-color: rgb(255, 196, 0);
-    }
-}
-
-.bar-1, .bar-2, .bar-3 {
-    width: 25px;
-    height: 3px;
-    margin: 5px;
-    transition: 0.2s;
-    background-color: var(--color-standard);
-}
-
-.change .bar-1 {
-    transform: translate(0, 8px) rotate(-45deg);
-}
-    
-.change .bar-2 {
-    opacity: 0;
-}
-    
-.change .bar-3 {
-    transform: translate(0, -8px) rotate(45deg);
-}
-
-.menu-container {
-    position: fixed;
-    left: 91.5%;
-}
-
-.menu-content {
-    flex-direction: column;
-    margin-top: 10px;
-    display: none;
-}
-
-.home-button, .about-button {
-    width: 100%;
-    margin-bottom: 5px;
-    padding: 10px;
-    background-color: var(--color-darker);
-    font-size: 12px;
-    border-radius: 5px;
-    border: 2px solid var(--color-dark);
-        &:hover, &:hover, &:hover, &:hover {
-        background-color: var(--color-standard);
     }
 }
 
@@ -417,8 +365,7 @@ svg {
 }
 
 .tech-stack-icon {
-    width: 50%;
-    max-width: 45px;
+    max-width: clamp(30px, 15%, 100px);
     padding: 2.5%;
     border-radius: 5px;
 }
@@ -427,8 +374,9 @@ svg {
     opacity: 0.95;
     flex: 1 1 25%;
     background-color: var(--color-darkest);
-    padding: 20px;
+    padding: clamp(12.5px, 1%, 30px);
     display: flex;
+    align-items: center;
     gap: 5%;
     border-radius: 12px;
     transition: 0.3s;
@@ -479,6 +427,20 @@ svg {
     color: var(--color-light);
 }
 
+.footer-text {
+    font-size: var(--font-smallest);
+    color: var(--color-darkest);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .landing-container {
+        margin-top: 20%;
+        margin-bottom: 30%;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .project {
         flex-direction: column;
@@ -491,6 +453,20 @@ svg {
     .project-button {
         border-radius: 5px;
     }
+    .nav-button:hover {
+        background-color: var(--color-standard);
+        scale: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .landing-container {
+        margin-top: 40%;
+        margin-bottom: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .tech-stack-chip-text {
         display: none;
     }
@@ -507,22 +483,5 @@ svg {
     .tech-stack-icon {
         padding: 5px;
     }
-    .nav-button:hover {
-        background-color: var(--color-standard);
-        scale: 1;
-    }
 }
 
-@media screen and (max-width: 1200px) {
-    .landing-container {
-        margin-top: 20%;
-        margin-bottom: 30%;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .landing-container {
-        margin-top: 40%;
-        margin-bottom: 40%;
-    }
-}

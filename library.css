@@ -1,0 +1,65 @@
+body {
+    font-family: "Inter", serif;
+    background-color: white;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-biggest: clamp(5rem, 7vw, 20rem);
+    --font-bigger: clamp(1.25rem, 3vw, 17.5rem);
+    --font-big: clamp(1rem, 2vw, 15rem);
+    --font-standard: clamp(0.5rem, 0.9vw, 12.5rem);
+    --font-small: clamp(0.4rem, 0.75vw, 10rem);
+    --font-smaller: clamp(0.35rem, 0.7vw, 7rem);
+    --font-smallest: clamp(0.3rem, 0.6vw, 6rem);
+
+    --color-light: rgb(150, 150, 150);
+    --color-standard: rgb(70, 70, 70);
+    --color-dark: rgb(40, 40, 40);
+    --color-darker: rgb(20, 20, 20);
+    --color-darkest: rgb(15, 15, 15);
+    --color-black: rgb(5, 5, 5);
+
+    --rounded-more: 20px;
+    --rounded-standard: 15px;
+    --rounded-less: 10px;
+}
+
+.box-container {
+    width: 75%;
+    margin: 15% auto 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 500px;
+    background-color: var(--color-black);
+    border-radius: var(--rounded-standard);
+}
+
+textarea {
+    width: 400px;
+    background-color: var(--color-dark);
+    border-radius: var(--rounded-standard);
+    resize: none;
+    padding: 5%;
+    transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+textarea:not(placeholder-shown) {
+    width: 500px; /* Expands when the user types */
+}

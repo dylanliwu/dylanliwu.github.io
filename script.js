@@ -1,21 +1,3 @@
-// const menuButton = document.getElementById("menuButton");
-// const menuContent = document.getElementById("menuContent");
-
-// menuButton.addEventListener("click", () => {
-//     menuButton.classList.toggle("change");
-//     menuContent.style.display = menuButton.classList.contains("change") ? "flex" : "none";
-// });
-
-// const handleEvent = (event) => {
-//   if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
-//       menuButton.classList.remove("change");
-//       menuContent.style.display = "none";
-//   }
-// };
-
-// document.addEventListener("click", handleEvent);
-// document.addEventListener("scroll", handleEvent);
-
 const projectContainer = document.querySelector(".projects-container");
 
 const boxes = document.querySelectorAll(".project");
@@ -100,3 +82,7 @@ navButton3.addEventListener("click", () => scrollToProject(3));
 navButton4.addEventListener("click", () => scrollToProject(4));
 navButton5.addEventListener("click", () => scrollToProject(5));
 
+const date = new Date();
+let year = date.getFullYear();
+let footerText = document.getElementById("footerText");
+footerText.innerHTML = year + " @ Dylan Li"

@@ -483,5 +483,8 @@ svg {
     .tech-stack-icon {
         padding: 5px;
     }
+    .nav-bar {
+        transform: translate(-50%, 45px);
+    }
 }
 

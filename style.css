@@ -101,6 +101,21 @@ svg {
     }
 }
 
+.fade-in {
+    animation: fadeIn 0.75s forwards;
+    display: inline;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s forwards;
+    pointer-events: none;
+}
+
+.slide-down {
+    opacity: 0;
+    animation: slideDown 0.5s 0.8s forwards;
+}
+
 /* Header */
 
 .header-container {
@@ -174,7 +189,6 @@ svg {
     font-style: italic;
     font-size: var(--font-biggest);
     color: black;
-    margin: auto;
     opacity: 0;
     animation: slideDown 0.5s 0.75s ease-out forwards;
 }
@@ -184,8 +198,12 @@ svg {
     font-weight: 500;
     text-align: center;
     color: var(--color-dark);
-    opacity: 0;
-    animation: slideDown 0.5s 0.85s ease-out forwards;
+    transition: 0.3s;
+    margin-top: 10px;
+    &:hover {
+        font-size: calc(var(--font-standard) + 0.1rem);
+        cursor: grab;
+    }
 }
 
 /* Projects */
@@ -243,14 +261,6 @@ svg {
     animation: slideDown 0.5s 1s ease-out forwards;
 }
 
-.fade-in {
-    animation: fadeIn 0.75s forwards;
-}
-
-.fade-out {
-    animation: fadeOut 0.3s forwards;
-}
-
 .project {
     display: flex;
     justify-content: space-between;
@@ -282,6 +292,8 @@ svg {
     margin-bottom: 5%;
     color: var(--color-standard);
 }
+
+
 
 .project-text {
     font-size: var(--font-standard);

@@ -200,10 +200,6 @@ svg {
     color: var(--color-dark);
     transition: 0.3s;
     margin-top: 10px;
-    &:hover {
-        font-size: calc(var(--font-standard) + 0.1rem);
-        cursor: grab;
-    }
 }
 
 /* Projects */

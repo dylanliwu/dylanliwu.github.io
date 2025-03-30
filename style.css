@@ -237,6 +237,7 @@ svg {
     border-radius: 1000px;
     background-color: var(--color-darkest);
     align-items: center;
+    justify-content: space-between;
 }
 
 .nav-button {
@@ -251,8 +252,12 @@ svg {
     }
 }
 
+.nav-buttons {
+    padding: 0 6px 0 5px;
+    transform: translateY(-2px);
+}
+
 .nav-lr {
-    position: absolute;
     font-size: 1.75rem;
     background-color: var(--color-standard);
     width: 15px;
@@ -267,11 +272,11 @@ svg {
 }
 
 .nav-left {
-    left: -35px;
+    left: 0px;
 }
 
 .nav-right {
-    right: -35px;
+    right: 0px;
 }
 
 .nav-icon {

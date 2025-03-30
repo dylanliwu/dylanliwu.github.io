@@ -71,6 +71,17 @@ svg {
     } 
 }
 
+@keyframes navBarSlideDown {
+    from {
+        transform: translate(-50%, 25px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 60px);
+        opacity: 1;
+    }
+}
+
 @keyframes bodyIdle {
     50% {
         transform: rotate(5deg) translate(10px, 5px);

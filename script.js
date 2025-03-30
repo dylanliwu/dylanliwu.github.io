@@ -82,6 +82,12 @@ navButton3.addEventListener("click", () => scrollToProject(3));
 navButton4.addEventListener("click", () => scrollToProject(4));
 navButton5.addEventListener("click", () => scrollToProject(5));
 
+document.addEventListener("DOMContentLoaded", () => {
+  const navBar = document.querySelector(".nav-bar");
+  navBar.style.opacity = "0"; // Ensure it's hidden initially
+  navBar.style.animation = "navBarSlideDown 0.5s 1.5s ease-out forwards"; // Trigger the animation
+});
+
 const date = new Date();
 let year = date.getFullYear();
 let footerText = document.getElementById("footerText");

@@ -77,7 +77,7 @@ svg {
         opacity: 0;
     }
     to {
-        transform: translate(-50%, 60px);
+        transform: translate(-50%, 50px);
         opacity: 1;
     }
 }
@@ -120,11 +120,6 @@ svg {
 .fade-out {
     animation: fadeOut 0.3s forwards;
     pointer-events: none;
-}
-
-.slide-down {
-    opacity: 0;
-    animation: slideDown 0.5s 0.8s forwards;
 }
 
 /* Header */
@@ -209,8 +204,9 @@ svg {
     font-weight: 500;
     text-align: center;
     color: var(--color-dark);
-    transition: 0.3s;
     margin-top: 10px;
+    opacity: 0;
+    animation: slideDown 0.5s 0.95s ease-out forwards;
 }
 
 /* Projects */
@@ -227,40 +223,22 @@ svg {
 
 .nav-bar {
     display: flex;
+    flex-direction: row;
     align-self: flex-end;
+    flex-direction: row;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 60px);
     width: fit-content;
     gap: 5px;
-    padding: 12px 15px;
-    border-radius: 1000px;
-    background-color: var(--color-darkest);
     align-items: center;
-    justify-content: space-between;
+    background-color: var(--color-darkest);
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .nav-button {
-    width: 10px;
-    height: 10px;
-    border-radius: 1000px;
-    background-color: var(--color-standard);
-    transition: 0.2s;
-    cursor: pointer;
-    &:hover {
-        scale: 1.1;
-        background-color: var(--color-light);
-    }
-}
-
-.nav-buttons {
-    padding: 0 6px 0 5px;
-    transform: translateY(-2px);
-}
-
-.nav-lr {
-    font-size: 1.75rem;
-    background-color: var(--color-standard);
+    font-size: 1rem;
+    background-color: var(--color-darkest);
     width: 15px;
     height: 15px;
     display: flex;
@@ -268,8 +246,10 @@ svg {
     align-items: center;
     transition: 0.2s;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
     &:hover {
-        background-color: var(--color-light);
+        background-color: var(--color-dark);
     }
 }
 
@@ -534,7 +514,26 @@ svg {
         padding: 5px;
     }
     .nav-bar {
-        transform: translate(-50%, 45px);
+        padding: 5px;
+        border-radius: 7px;
+    }
+    .nav-button {
+        font-size: 0.75rem;
+    }
+    @keyframes navBarSlideDown {
+        from {
+            transform: translate(-50%, 20px);
+            opacity: 0;
+        }
+        to {
+            transform: translate(-50%, 40px);
+            opacity: 1;
+        }
     }
 }
 
+@media (pointer: coarse) {
+    .nav-bar {
+        display: none;
+    }
+}

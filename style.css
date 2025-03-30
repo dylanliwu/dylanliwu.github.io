@@ -246,6 +246,7 @@ svg {
     border-radius: 1000px;
     background-color: var(--color-standard);
     transition: 0.2s;
+    cursor: pointer;
     &:hover {
         scale: 1.1;
         background-color: var(--color-light);
@@ -266,17 +267,10 @@ svg {
     justify-content: center;
     align-items: center;
     transition: 0.2s;
+    cursor: pointer;
     &:hover {
         background-color: var(--color-light);
     }
-}
-
-.nav-left {
-    left: 0px;
-}
-
-.nav-right {
-    right: 0px;
 }
 
 .nav-icon {

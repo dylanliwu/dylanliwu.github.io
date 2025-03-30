@@ -236,6 +236,7 @@ svg {
     padding: 12px 15px;
     border-radius: 1000px;
     background-color: var(--color-darkest);
+    align-items: center;
 }
 
 .nav-button {
@@ -248,6 +249,33 @@ svg {
         scale: 1.1;
         background-color: var(--color-light);
     }
+}
+
+.nav-lr {
+    position: absolute;
+    font-size: 1.75rem;
+    background-color: var(--color-standard);
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    &:hover {
+        background-color: var(--color-light);
+    }
+}
+
+.nav-left {
+    left: -35px;
+}
+
+.nav-right {
+    right: -35px;
+}
+
+.nav-icon {
+    color: var(--color-darkest);
 }
 
 .main-project-title {

@@ -116,6 +116,31 @@ navButton5.addEventListener("click", () => scrollToProject(5));
 navButton6.addEventListener("click", () => scrollToProject(6));
 navButton7.addEventListener("click", () => scrollToProject(7));
 
+const navLeft = document.getElementById("navLeft");
+const navRight = document.getElementById("navRight");
+
+navLeft.addEventListener("click", () => {
+    if (index > 1) {
+        scrollToProject(index - 1);
+        updateNavButtons(index - 1);
+    }
+});
+
+navRight.addEventListener("click", () => {
+    if (index < 7) {
+        scrollToProject(index + 1);
+        updateNavButtons(index + 1);
+    }
+});
+
+function updateNavButtons(targetIndex) {
+    const navButtons = [navButton1, navButton2, navButton3, navButton4, navButton5, navButton6, navButton7];
+    navButtons.forEach((button, i) => {
+        button.style.width = i === targetIndex - 1 ? '30px' : '10px';
+    });
+    index = targetIndex;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const navBar = document.querySelector(".nav-bar");
   navBar.style.opacity = "0"; // Ensure it's hidden initially

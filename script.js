@@ -79,7 +79,15 @@ let copiedTimeout;
 
 emailButton.addEventListener("click", () => {
   navigator.clipboard.writeText("dylanli0419@gmail.com");
-  email.classList.add("copied");
+  email.classList.add("open", "copied");
   clearTimeout(copiedTimeout);
   copiedTimeout = setTimeout(() => email.classList.remove("copied"), 1500);
+});
+
+email.addEventListener("mouseleave", () => email.classList.remove("open"));
+
+document.addEventListener("click", (event) => {
+  if (!email.contains(event.target)) {
+    email.classList.remove("open");
+  }
 });

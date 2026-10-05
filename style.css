@@ -209,7 +209,7 @@ svg {
     }
 }
 
-.email:hover .email-tooltip {
+.email:hover .email-tooltip, .email.open .email-tooltip {
     opacity: 0.75;
     pointer-events: auto;
     transform: translate(-50%, 0) scale(1);
@@ -551,6 +551,31 @@ svg {
 }
 
 @media screen and (max-width: 900px) {
+    .email-tooltip {
+        bottom: auto;
+        top: calc(100% + 12px);
+        left: auto;
+        right: calc(50% - 22px);
+        transform: translateY(-6px) scale(0.95);
+        transform-origin: top right;
+        &::before {
+            top: auto;
+            bottom: 100%;
+            height: 12px;
+        }
+        &::after {
+            top: auto;
+            bottom: 100%;
+            left: auto;
+            right: 17px;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 1.5px;
+            transform: translateY(60%) rotate(45deg);
+        }
+    }
+    .email:hover .email-tooltip, .email.open .email-tooltip {
+        transform: translateY(0) scale(1);
+    }
     .project {
         flex-direction: column;
         gap: 0;

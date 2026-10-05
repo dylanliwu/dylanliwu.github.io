@@ -156,6 +156,85 @@ svg {
     }
 }
 
+.email {
+    position: relative;
+}
+
+.email-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.email-tooltip {
+    position: absolute;
+    bottom: calc(100% + 16px);
+    left: 50%;
+    transform: translate(-50%, 6px) scale(0.95);
+    transform-origin: bottom center;
+    background: black;
+    color: white;
+    font-family: inherit;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    display: grid;
+    justify-items: center;
+    opacity: 0;
+    pointer-events: none;
+    user-select: text;
+    cursor: text;
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 16px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-bottom-right-radius: 1.5px;
+        transform: translate(-50%, -60%) rotate(45deg);
+    }
+}
+
+.email:hover .email-tooltip {
+    opacity: 0.75;
+    pointer-events: auto;
+    transform: translate(-50%, 0) scale(1);
+}
+
+.email-address, .email-copied {
+    grid-area: 1 / 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.email-copied {
+    opacity: 0;
+    transform: translateY(4px);
+}
+
+.email.copied .email-address {
+    opacity: 0;
+    transform: translateY(-4px);
+}
+
+.email.copied .email-copied {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Landing */
 
 .landing-container {

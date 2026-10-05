@@ -72,3 +72,14 @@ const date = new Date();
 let year = date.getFullYear();
 let footerText = document.getElementById("footerText");
 footerText.innerHTML = year + " @ Dylan Li";
+
+const email = document.querySelector(".email");
+const emailButton = document.querySelector(".email-button");
+let copiedTimeout;
+
+emailButton.addEventListener("click", () => {
+  navigator.clipboard.writeText("dylanli0419@gmail.com");
+  email.classList.add("copied");
+  clearTimeout(copiedTimeout);
+  copiedTimeout = setTimeout(() => email.classList.remove("copied"), 1500);
+});
